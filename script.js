@@ -13,6 +13,17 @@ function createSquares() {
 
 }
 
+function changeSquareSize() {
+
+    const colorSquare = document.querySelectorAll(".square");
+
+    colorSquare.forEach((square) => {
+        square.style.width = `calc(100% / ${squareNumber})`;
+        square.style.height = `calc(100% / ${squareNumber})`;
+    })
+
+}
+
 function removeSquares() {
 
     const colorSquare = document.querySelectorAll(".square");
@@ -44,5 +55,6 @@ changeSquare.addEventListener("click", () => {
     removeSquares()
 
     createSquares();
+    changeSquareSize()
 
 })
