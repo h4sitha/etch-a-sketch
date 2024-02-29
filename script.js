@@ -77,6 +77,11 @@ changeSquare.addEventListener("click", () => {
 
     squareNumber = prompt("How many squares you want in each row?");
 
+    while (squareNumber > 100) {
+        alert("Maximum number allowed is 100");
+        squareNumber = prompt("How many squares you want in each row?");
+    }
+
     removeSquares();
     createSquares();
 
