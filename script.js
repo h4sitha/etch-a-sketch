@@ -13,6 +13,16 @@ function createSquares() {
 
 }
 
+function removeSquares() {
+
+    const colorSquare = document.querySelectorAll(".square");
+
+    for (let i=0; i < colorSquare.length; i++) {
+        colorSquare[i].remove();
+    }
+    
+}
+
 createSquares();
 
 const colorSquare = document.querySelectorAll(".square")
@@ -30,6 +40,8 @@ colorSquare.forEach((singleSquare) => {
 changeSquare.addEventListener("click", () => {
 
     squareNumber = prompt("How many squares you want in each row?");
+
+    removeSquares()
 
     createSquares();
 
