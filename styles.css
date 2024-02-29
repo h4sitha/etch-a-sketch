@@ -22,6 +22,9 @@ body {
 .square {
     width: calc(100%/16);
     height: calc(100%/16);
+}
+
+.square-border {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 

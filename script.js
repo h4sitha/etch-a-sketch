@@ -5,6 +5,7 @@ const clearBtn = document.querySelector("#clear");
 const randomColorBtn = document.querySelector("#random-color");
 const solidColorBtn = document.querySelector("#solid-color");
 const eraserBtn = document.querySelector("#eraser");
+const showGridBtn = document.querySelector("#show-grid");
 
 const span = document.querySelector("span");
 
@@ -18,6 +19,7 @@ function createSquares() {
     for (let i=0; i < squareNumber*squareNumber; i++) {
         const colorSquare = document.createElement("div");
         colorSquare.classList.add("square");
+        colorSquare.classList.add("square-border");
         container.appendChild(colorSquare);
     }
 
@@ -61,6 +63,16 @@ function addColorToSquare() {
                 e.target.style.backgroundColor = "";
             }
         })
+    })
+
+}
+
+function removeOrShowGrid() {
+
+    const colorSquare = document.querySelectorAll(".square")
+
+    colorSquare.forEach((singleSquare) => {
+        singleSquare.classList.toggle("square-border");
     })
 
 }
@@ -125,4 +137,8 @@ solidColorBtn.addEventListener("click", () => {
 eraserBtn.addEventListener("click", () => {
     paintingColor = "eraser"
     span.textContent = "Eraser"
+})
+
+showGridBtn.addEventListener("click", () => {
+    removeOrShowGrid();
 })
