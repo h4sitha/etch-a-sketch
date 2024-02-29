@@ -52,6 +52,19 @@ function addColorToSquare() {
 
 }
 
+function getRandomColor() {
+    
+    const hexCharatcers = "0123456789ABCDEF";
+    let randomColor = "#";
+
+    for (let i=0; i < 6; i++) {
+        randomColor += hexCharatcers.charAt(Math.floor(Math.random() * 16));
+    }
+
+    return randomColor;
+
+}
+
 changeSquare.addEventListener("click", () => {
 
     squareNumber = prompt("How many squares you want in each row?");
