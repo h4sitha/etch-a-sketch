@@ -141,4 +141,9 @@ eraserBtn.addEventListener("click", () => {
 
 showGridBtn.addEventListener("click", () => {
     removeOrShowGrid();
+    if (showGridBtn.textContent === "Hide Grid") {
+        showGridBtn.textContent = "Show Grid";
+    } else {
+        showGridBtn.textContent = "Hide Grid";
+    }
 })
