@@ -6,6 +6,8 @@ const randomColorBtn = document.querySelector("#random-color");
 const solidColorBtn = document.querySelector("#solid-color");
 const eraserBtn = document.querySelector("#eraser");
 
+const span = document.querySelector("span");
+
 let squareNumber = 16;
 let paintingColor = "black";
 
@@ -112,12 +114,15 @@ clearBtn.addEventListener("click", function() {
 
 randomColorBtn.addEventListener("click", () => {
     paintingColor = "random";
+    span.textContent = "Random Color"
 })
 
 solidColorBtn.addEventListener("click", () => {
     paintingColor = "black";
+    span.textContent = "Black"
 })
 
 eraserBtn.addEventListener("click", () => {
     paintingColor = "eraser"
+    span.textContent = "Eraser"
 })
