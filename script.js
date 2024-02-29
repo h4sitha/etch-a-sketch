@@ -5,3 +5,13 @@ for (let i=0; i < 256; i++) {
     colorSquare.classList.add("square");
     container.appendChild(colorSquare);
 }
+
+const colorSquare = document.querySelectorAll(".square")
+
+colorSquare.forEach((singleSquare) => {
+
+    singleSquare.addEventListener("mouseover", (e) => {
+        e.target.style.backgroundColor = "black";
+    })
+
+})
