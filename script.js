@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
-const changeSquare = document.querySelector("button");
+const changeSquare = document.querySelector("#change-size");
+const clearBtn = document.querySelector("#clear");
 
 let squareNumber = 16;
 
@@ -57,5 +58,15 @@ changeSquare.addEventListener("click", () => {
 
     removeSquares();
     createSquares();
+
+})
+
+clearBtn.addEventListener("click", function() {
+    
+    const colorSquare = document.querySelectorAll(".square");
+
+    colorSquare.forEach((square) => {
+        square.style.backgroundColor = "";
+    })
 
 })
