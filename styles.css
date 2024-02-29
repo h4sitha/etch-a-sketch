@@ -31,17 +31,25 @@ button, span {
 
 #btn-container {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
 #eraser {
     margin-left: auto;
-    margin-right: -17px;
+    margin-right: -7px;
 }
 
 h1 {
     text-align: center;
     font-size: 50px;
     margin: 10px;
+}
+
+#show-grid {
+    margin-left: -7px;
+}
+
+#random-color {
+    margin-left: -1.5px;
 }
