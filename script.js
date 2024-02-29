@@ -3,6 +3,8 @@ const changeSquare = document.querySelector("button");
 
 let squareNumber = 16;
 
+createSquares();
+
 function createSquares() {
 
     for (let i=0; i < squareNumber*squareNumber; i++) {
@@ -37,18 +39,14 @@ function removeSquares() {
     
 }
 
-createSquares();
-
 function addColorToSquare() {
 
     const colorSquare = document.querySelectorAll(".square")
 
     colorSquare.forEach((singleSquare) => {
-
         singleSquare.addEventListener("mouseover", (e) => {
             e.target.style.backgroundColor = "black";
         })
-
     })
 
 }
@@ -58,7 +56,6 @@ changeSquare.addEventListener("click", () => {
     squareNumber = prompt("How many squares you want in each row?");
 
     removeSquares();
-
     createSquares();
 
 })
