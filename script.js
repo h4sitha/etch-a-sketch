@@ -75,11 +75,21 @@ function getRandomColor() {
 
 changeSquare.addEventListener("click", () => {
 
-    squareNumber = parseInt(prompt("How many squares you want in each row?"));
+    squareNumber = (prompt("How many squares you want in each row?"));
 
-    while (squareNumber > 100 || isNaN(squareNumber)) {
-        alert("Maximum number allowed is 100");
-        squareNumber = parseInt(prompt("How many squares you want in each row?"));
+    while (squareNumber > 100 || isNaN(parseInt(squareNumber))) {
+
+        if (squareNumber > 100) {
+            alert("Maximum number allowed is 100");
+        } else if (squareNumber === null) {
+            alert("You cancelled. Grid will reset to default");
+            squareNumber = 16;
+            break;
+        } else {
+            alert("Enter a valid number");
+        }
+
+        squareNumber = (prompt("How many squares you want in each row?"));
     }
 
     removeSquares();
