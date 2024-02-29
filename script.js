@@ -23,6 +23,8 @@ function createSquares() {
         container.appendChild(colorSquare);
     }
 
+    showGridBtn.textContent = "Hide Grid";
+
     changeSquareSize();
     addColorToSquare();
 
