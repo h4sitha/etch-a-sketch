@@ -4,9 +4,10 @@ const changeSquare = document.querySelector("#change-size");
 const clearBtn = document.querySelector("#clear");
 const randomColorBtn = document.querySelector("#random-color");
 const solidColorBtn = document.querySelector("#solid-color");
+const eraserBtn = document.querySelector("#eraser");
 
 let squareNumber = 16;
-let isSolidColor = true;
+let paintingColor = "black";
 
 createSquares();
 
@@ -50,10 +51,12 @@ function addColorToSquare() {
 
     colorSquare.forEach((singleSquare) => {
         singleSquare.addEventListener("mouseover", (e) => {
-            if (isSolidColor) {
+            if (paintingColor === "black") {
                 e.target.style.backgroundColor = "black";
-            } else {
+            } else if (paintingColor === "random") {
                 e.target.style.backgroundColor = getRandomColor();
+            } else {
+                e.target.style.backgroundColor = "";
             }
         })
     })
@@ -108,9 +111,13 @@ clearBtn.addEventListener("click", function() {
 })
 
 randomColorBtn.addEventListener("click", () => {
-    isSolidColor = false;
+    paintingColor = "random";
 })
 
 solidColorBtn.addEventListener("click", () => {
-    isSolidColor = true;
+    paintingColor = "black";
+})
+
+eraserBtn.addEventListener("click", () => {
+    paintingColor = "eraser"
 })
