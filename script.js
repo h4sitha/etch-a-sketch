@@ -128,7 +128,7 @@ clearBtn.addEventListener("click", function() {
 
 randomColorBtn.addEventListener("click", () => {
     paintingColor = "random";
-    span.textContent = "Random Color"
+    span.textContent = "Random"
 })
 
 solidColorBtn.addEventListener("click", () => {
