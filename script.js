@@ -62,7 +62,7 @@ function addColorToSquare() {
             } else if (paintingColor === "random") {
                 e.target.style.backgroundColor = getRandomColor();
             } else {
-                e.target.style.backgroundColor = "";
+                e.target.style.backgroundColor = "white";
             }
         })
     })
@@ -121,7 +121,7 @@ clearBtn.addEventListener("click", function() {
     const colorSquare = document.querySelectorAll(".square");
 
     colorSquare.forEach((square) => {
-        square.style.backgroundColor = "";
+        square.style.backgroundColor = "white";
     })
 
 })

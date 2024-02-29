@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
 }
 
 #container {
@@ -22,6 +23,7 @@ body {
 .square {
     width: calc(100%/16);
     height: calc(100%/16);
+    background-color: white;
 }
 
 .square-border {
