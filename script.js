@@ -1,8 +1,12 @@
 const container = document.querySelector("#container");
 const changeSquare = document.querySelector("#change-size");
+
 const clearBtn = document.querySelector("#clear");
+const randomColorBtn = document.querySelector("#random-color");
+const solidColorBtn = document.querySelector("#solid-color");
 
 let squareNumber = 16;
+let isSolidColor = true;
 
 createSquares();
 
@@ -46,7 +50,11 @@ function addColorToSquare() {
 
     colorSquare.forEach((singleSquare) => {
         singleSquare.addEventListener("mouseover", (e) => {
-            e.target.style.backgroundColor = "black";
+            if (isSolidColor) {
+                e.target.style.backgroundColor = "black";
+            } else {
+                e.target.style.backgroundColor = getRandomColor();
+            }
         })
     })
 
@@ -82,4 +90,12 @@ clearBtn.addEventListener("click", function() {
         square.style.backgroundColor = "";
     })
 
+})
+
+randomColorBtn.addEventListener("click", () => {
+    isSolidColor = false;
+})
+
+solidColorBtn.addEventListener("click", () => {
+    isSolidColor = true;
 })
