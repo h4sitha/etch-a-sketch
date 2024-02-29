@@ -11,6 +11,9 @@ function createSquares() {
         container.appendChild(colorSquare);
     }
 
+    changeSquareSize();
+    addColorToSquare();
+
 }
 
 function changeSquareSize() {
@@ -36,25 +39,26 @@ function removeSquares() {
 
 createSquares();
 
-const colorSquare = document.querySelectorAll(".square")
+function addColorToSquare() {
 
-colorSquare.forEach((singleSquare) => {
+    const colorSquare = document.querySelectorAll(".square")
 
-    singleSquare.addEventListener("mouseover", (e) => {
-        e.target.style.backgroundColor = "black";
+    colorSquare.forEach((singleSquare) => {
+
+        singleSquare.addEventListener("mouseover", (e) => {
+            e.target.style.backgroundColor = "black";
+        })
+
     })
 
-})
-
-
+}
 
 changeSquare.addEventListener("click", () => {
 
     squareNumber = prompt("How many squares you want in each row?");
 
-    removeSquares()
+    removeSquares();
 
     createSquares();
-    changeSquareSize()
 
 })
